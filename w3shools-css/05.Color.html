@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color</title>
+</head>
+<style>
+    .color>li{
+        width:200px;
+        height: 30px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .color>li:nth-child(1){   /*nth-child下标从1开始*/
+        background:red ;/*Valid Color*/
+    }
+    .color>li:nth-child(2){
+        background:rgb(255,0,0) ;/*RGB Color*/
+    }
+    .color>li:nth-child(3){
+        background:#ff0000;/*Hex Color*/
+    }
+
+</style>
+<body>
+<ul class="color">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+
+</body>
+</html>
