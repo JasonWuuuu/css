@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border</title>
+    <style>
+        li {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body ng-app="app">
+<script src="angular.js"></script>
+<ul ng-controller="ctrlA">
+    <li style="{{x}}" ng-repeat="x in  styles">{{x}}</li>
+</ul>
+
+
+</body>
+<script>
+    var app = angular.module("app", []);
+    app.controller("ctrlA", function ($scope) {
+        /*边框线条的样式*/
+        $scope.styles = [];
+        $scope.borderStyle = ["border-style: dotted;", "border-style: dashed;", "border-style: solid;", "border-style: double;",
+            "border-style: groove;", "border-style: ridge;", "border-style: inset;", "border-style: outset;", "border-style: none;",
+            "border-style: hidden;", "border-style: dotted dashed solid double;"];
+        /*边框颜色*/
+        $scope.borderColor = ["border-color:red"];
+        /*单独规定一条边框样式，或者同时给四个边框指定不同样式（写法与margin设置多个方向相同）*/
+        $scope.indivisualStyle = ["border-top-style: dotted;", " border-right-style: solid;", "border-bottom-style: dotted;",
+            "border-left-style: solid;", "border-style: dotted solid double dashed;"];
+        /*边框样式的简明写法，顺序是 width style color */
+        $scope.shorthandProperty = ["border: 5px solid red;", "  border-left: 6px solid red;background-color: lightgrey;",
+            "border-bottom: 6px solid red;background-color: lightgrey;"];
+        $scope.roundedBorder = ["  border: 2px solid red;border-radius: 5px;"];
+        /*反斜杠是字符串折行，不是代码折行*/
+        $scope.styles = $scope.styles.concat($scope.borderStyle).concat($scope.borderColor).concat($scope.indivisualStyle).concat($scope.shorthandProperty).concat($scope.roundedBorder);
+
+    });
+
+</script>
+</html>
