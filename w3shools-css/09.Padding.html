@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Padding</title>
+    <style>
+        /*消除默认边距的干扰*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: cornflowerblue;
+            list-style: none;
+            overflow: hidden;
+            /*Shorthand padding   注意 ul左侧会有默认的padding 40px */
+            padding: 40px 20px;
+        }
+
+        li {
+
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>hahaha</li>
+</ul>
+
+</body>
+</html>
