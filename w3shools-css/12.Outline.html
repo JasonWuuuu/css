@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Outline</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #container {
+            width: 100px;
+            height: 300px;
+            display: block;
+            background: cornflowerblue;
+            border: 20px solid darkblue;
+            padding: 30px;
+            /*注意简写顺序从top开始  顺时针*/
+            margin: 50px 0 0 100px;
+            outline: 20px inset lightblue;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    重点：
+    <ul>
+        <li>outline与border不同，它并不影响块的总宽高</li>
+        <li>但基本用法与border完全一致，不再赘述</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
