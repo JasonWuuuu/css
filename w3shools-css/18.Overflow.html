@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overflow</title>
+    <style>
+ /*overflow只对指定尺寸的块级元素有效*/
+   ul li{
+       display: block;
+       width:250px;
+       height:100px;
+       border:1px solid #666;
+       margin: 100px;
+   }
+   ul li:nth-child(1){
+        overflow: visible;
+   }
+   ul li:nth-child(2){
+       overflow: hidden;
+   }
+   /*scroll无论文字是否溢出，都会有滚动条出现*/
+   ul li:nth-child(3){
+       overflow: scroll;
+   }
+   /*auto只会在文字确实溢出的时候出现滚动条*/
+ ul li:nth-child(4){
+     overflow: auto;
+ }
+ ul li:nth-child(5){
+     overflow-x:hidden;
+ }
+ ul li:nth-child(6){
+     overflow-y:scroll;
+     overflow-x: scroll;
+ }
+    </style>
+</head>
+<body>
+  <ul>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+      <li>You can use the overflow property when you want to have better control of the layout.
+          The overflow property specifies what happens if content overflows an element's box.</li>
+  </ul>
+
+
+</body>
+</html>
+
